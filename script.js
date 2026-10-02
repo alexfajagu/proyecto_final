@@ -1,29 +1,133 @@
+// BASE DE DATOS COMPLETA DE CURSOS SYSTEM PLUS
 const courses = [
-    { id: 1, type: "tecnico", title: "Técnico en DISEÑO GRÁFICO", res: "Resolución SEM-1900-193-201501", icon: "🎨", desc: "Será formado para construir artes gráficas, visuales, audiovisuales que soportan las fases de expectativa, lanzamientos, promoción y ventas.", modules: ["Informática Básica y Avanzada", "Emprendimiento", "Piezas Publicitarias", "Fotografía y Montaje", "Audio y Animación 2D y 3D", "Edición de Vídeo"] },
-    { id: 2, type: "tecnico", title: "Técnico en PROGRAMACIÓN WEB", res: "Resolución SEM-1900-191-201502", icon: "💻", desc: "Los desarrolladores web pueden trabajar en todo tipo de organismos, como grandes empresas, gobiernos, o por cuenta propia como autónomos.", modules: ["Informática Básica y Avanzada", "Herramientas Avanzadas de Excel", "Emprendimiento", "Diseño Web", "Bases de datos y PHP", "Java y Dispositivos Móviles"] },
-    { id: 3, type: "tecnico", title: "Técnico en CONTABILIDAD Y FINANZAS", res: "Resolución SEM-1900-189-201503", icon: "📊", desc: "Ocupaciones como asistente administrativo y de oficina, auxiliar contable, auxiliar de nómina, auxiliar de facturación.", modules: ["Informática Básica y Avanzada", "Herramientas Avanzadas de Excel", "Emprendimiento", "Procesos de Oficina", "Procesos Contables", "Proyección Financiera"] },
-    { id: 4, type: "tecnico", title: "Técnico en SEGURIDAD OCUPACIONAL", res: "Resolución SEM-1900-195-201504", icon: "🦺", desc: "Como técnico laboral, puede desempeñarse como auxiliar en seguridad y salud en el trabajo con capacidad de identificar condiciones inseguras.", modules: ["Informática Básica y Avanzada", "Herramientas Avanzadas de Excel", "Emprendimiento", "Introducción al SG-SST", "Inspecciones de Seguridad", "Planes de Emergencia", "Procedimiento de Trabajo Seguro (PTS)", "Inglés"] },
-    { id: 5, type: "tecnico", title: "Técnico en MANTENIMIENTO DE PC", res: "Resolución SEM-1900-188-201505", icon: "⚙️", desc: "Estará en capacidad de brindar soporte técnico en ensamble, instalación y mantenimiento de computadores, redes y soporte web.", modules: ["Informática Básica y Avanzada", "Herramientas Avanzadas de Excel", "Emprendimiento", "Mantenimiento de Computadores", "Redes Windows", "Diseño Web"] },
-    { id: 6, type: "tecnico", title: "Técnico en MERCADEO Y VENTAS", res: "Resolución SEM-1900-196-201506", icon: "📈", desc: "Será formado para implementar procesos que soportan expectativa, lanzamiento, promoción, venta y atención post-venta.", modules: ["Informática Básica y Avanzada", "Herramientas Avanzadas de Excel", "Emprendimiento", "Procesos de Oficina", "Marketing y Ventas", "Investigación de Mercados"] },
-    { id: 7, type: "tecnico", title: "Técnico en GERENCIA ADMINISTRATIVA", res: "Resolución SEM-1900-194-201507", icon: "🏢", desc: "Dar respuesta a las necesidades de la micro, mediana y pequeña empresa, haciéndose cargo del ciclo contable y secretarial.", modules: ["Informática Básica y Avanzada", "Herramientas Avanzadas de Excel", "Emprendimiento", "Procesos de Oficina", "Procesos Contables", "Procesos Legales"] },
-    { id: 8, type: "tecnico", title: "Técnico en PRIMERA INFANCIA", res: "Resolución SEM-1900-719-201808", icon: "🧸", desc: "Estarán en capacidad de cuidar e instruir a los niños en actividades que estimulen su crecimiento intelectual, físico y social.", modules: ["Informática Básica", "Excel Avanzado", "Emprendimiento", "Protección de los Derechos de Primera Infancia", "Promoción de la Salud y Nutrición", "Atención al Cliente", "Prácticas Educativas", "Inglés"] },
-    
-    { id: 9, type: "curso", title: "Curso de Diseño Web", res: "Área de Programación - Curso Corto", icon: "🌐", desc: "Aprende a crear y a diseñar una página web utilizando componentes gráficos y un lenguaje de marcas llamado HTML/HTML5.", modules: ["Introducción", "Recursos Gráficos", "HTML 5", "CSS 3", "Administración Web", "CMS"] },
-    { id: 10, type: "curso", title: "Curso de Bases de datos y PHP", res: "Área de Programación - Curso Corto", icon: "🗄️", desc: "Aprende a crear bases de datos con SQL para conectar tu sitio web, y utiliza PHP orientado a objetos.", modules: ["Estructura y Análisis de Información", "SQL Introducción a la Base de Datos", "SQL Estructura y Creación de Bases de Datos", "PHP Fundamentos", "PHP Estructura de Datos", "PHP Orientado a Objetos"] },
-    { id: 11, type: "curso", title: "Curso de Java y dispositivos móviles", res: "Área de Programación - Curso Corto", icon: "📱", desc: "Aprende un lenguaje de programación orientado a objetos para PC y dispositivos móviles utilizando Android.", modules: ["Java Fundamentos", "Java Entorno Gráfico", "Java Base de Datos", "Android Fundamentos", "Android Desarrollo de Aplicaciones"] },
-    { id: 12, type: "curso", title: "Curso de Excel avanzado", res: "Área Administrativa - Curso Corto", icon: "📑", desc: "Conozca y administre de forma asertiva las diferentes herramientas que ofrece la aplicación Microsoft Excel.", modules: ["Fundamentos", "Funciones", "Manejo de Datos", "Grabadora de Macros", "Macros VBA", "Modelos Financieros"] },
-    { id: 13, type: "curso", title: "Curso de Informática Básica", res: "Área Administrativa - Curso Corto", icon: "💻", desc: "Desarrolla habilidades prácticas en el uso de las herramientas ofimáticas e internet para el aprendizaje laboral.", modules: ["Windows", "Word", "Excel", "Power Point", "Internet"] },
-    { id: 18, type: "curso", title: "Ensamble y Mantenimiento de Computadores", res: "Área de Mantenimiento - Curso Corto", icon: "🔧", desc: "Aprender a realizar mantenimiento preventivo y correctivo a equipos de mesa o portátiles e instalación de sistemas.", modules: ["Partes", "Ensamble", "Instalación de Software", "Hardware Multimedia e Internet", "Sistema Operativo para Técnicos", "Diagnóstico y Corrección"] },
-    { id: 22, type: "curso", title: "Curso de Piezas Gráficas", res: "Área de Diseño - Curso Corto", icon: "✏️", desc: "Aprende a crear piezas gráficas que posibilitan comunicar visualmente información usando volantes, afiches y pendones.", modules: ["Conceptos de Diseño y Publicidad", "Corel Draw - Ilustración", "Corel Piezas Gráficas", "Illustrator (Ilustración)", "Illustrator (Herramientas y Piezas)", "Soporte Publicitario"] },
-    { id: 26, type: "curso", title: "Introducción al SG – SST", res: "Seguridad y Salud - Curso Corto", icon: "🦺", desc: "Aprenda los conceptos de seguridad y salud en el trabajo, el ciclo PHVA, legislación y tipos de riesgos.", modules: ["Legislación", "Introducción a la Salud Ocupacional", "Riesgos Físicos", "Riesgos Mecánicos y Biomecánicos", "Riesgo Psicosocial", "Riesgo Químico"] },
+    // ================= ÁREA DE PROGRAMACIÓN =================
+    { 
+        id: 1, type: "curso", title: "Curso de Diseño Web", res: "Área de Programación", icon: "🌐", 
+        desc: "Aprende a crear y a diseñar una página web utilizando componentes gráficos que también serán aprendidos dentro de este módulo de formación, conoce y aprende un lenguaje de marcas llamado HTML/HTML5.", 
+        modules: ["INTRODUCCIÓN", "RECURSOS GRÁFICOS", "HTML 5", "CSS 3", "ADMINISTRACIÓN WEB", "CMS"] 
+    },
+    { 
+        id: 2, type: "curso", title: "Curso de Bases de datos y PHP", res: "Área de Programación", icon: "🗄️", 
+        desc: "Aprende a crear bases de datos con el lenguaje de programación SQL que te permitirá conectar tu base de datos con la página o aplicativo web, aprende un lenguaje orientado a objetos como lo es PHP.", 
+        modules: ["ESTRUCTURA Y ANÁLISIS DE INFORMACIÓN", "SQL INTRODUCCIÓN A LA BASE DE DATOS", "SQL ESTRUCTURA Y CREACIÓN DE BASES DE DATOS", "PHP FUNDAMENTOS", "PHP ESTRUCTURA DE DATOS", "PHP ORIENTADO A OBJETOS"] 
+    },
+    { 
+        id: 3, type: "curso", title: "Curso de Java y dispositivos móviles", res: "Área de Programación", icon: "📱", 
+        desc: "Aprende un lenguaje de programación orientado a objetos cuyo objetivo es escribir el código una vez y ejecutarse en cualquier dispositivo. Aprende Android para crear apps móviles.", 
+        modules: ["JAVA FUNDAMENTOS", "JAVA ENTORNO GRÁFICO", "JAVA BASE DE DATOS", "ANDROID FUNDAMENTOS", "ANDROID DESARROLLO DE APLICACIONES"] 
+    },
 
-    { id: 31, type: "diplomado", title: "Proyecciones Financieras", res: "Diplomado Especializado", icon: "📈", desc: "Aprende y maneja los indicadores necesarios para realizar una mejor proyección financiera y correcta toma de decisiones.", modules: ["Fórmulas Financieras I y II", "Diagnóstico Financiero", "Indicadores Financieros", "Proyección, Inflación y Tasa", "Balance y Flujo de Caja", "Análisis y Evaluación con NIIF"] },
-    { id: 32, type: "diplomado", title: "Social Media - Marketing Digital", res: "Diplomado Especializado", icon: "📱", desc: "Conoce cómo realizar mercadeo digital para una empresa, utilizando tecnología para su crecimiento profesional y comercial.", modules: ["Economía y Empresa", "Identificación de Mercados", "Preincubación de ideas", "Incubación y Operación", "Estrategias de Expansión"] },
-    { id: 33, type: "diplomado", title: "Programación con Excel (Avanzado)", res: "Diplomado Especializado", icon: "📑", desc: "Maneje el programa para desarrollar plantillas para manejo de nóminas, cardex, facturación, inventarios, usando macros.", modules: ["Fundamentos de Excel", "Funciones y Manejo de Datos", "Tablas Dinámicas y Filtros Avanzados", "Grabadora de Macros", "Macros VBA", "Modelos Financieros"] }
+    // ================= ÁREA ADMINISTRATIVA =================
+    { 
+        id: 4, type: "curso", title: "Curso de Excel avanzado", res: "Área Administrativa", icon: "📊", 
+        desc: "Conozca y administre de forma asertiva, las diferentes herramientas que ofrece la aplicación Microsoft Excel. Tablas dinámicas, funciones, macros y filtros avanzados.", 
+        modules: ["FUNDAMENTOS", "FUNCIONES", "MANEJO DE DATOS", "GRABADORA DE MACROS", "MACROS VBA", "MODELOS FINANCIEROS"] 
+    },
+    { 
+        id: 5, type: "curso", title: "Curso de Informática Básica", res: "Área Administrativa", icon: "💻", 
+        desc: "Desarrolla habilidades prácticas en el uso de las herramientas ofimáticas e internet para el uso del aprendizaje en un ambiente laboral o personal.", 
+        modules: ["WINDOWS", "WORD", "EXCEL", "POWER POINT", "INTERNET"] 
+    },
+    { 
+        id: 6, type: "curso", title: "Curso de Emprendimiento Empresarial", res: "Área Administrativa", icon: "💡", 
+        desc: "Desarrolla habilidades prácticas en el montaje de una empresa utilizando tecnología para su crecimiento profesional y empresarial, conoce cómo realizar mercadeo y proyecciones financieras.", 
+        modules: ["ECONOMÍA Y EMPRESA", "IDENTIFICACIÓN", "PRE-INCUBACIÓN", "INCUBACIÓN", "OPERACIÓN", "EXPANSIÓN"] 
+    },
+    { 
+        id: 7, type: "curso", title: "Curso de Procesos Contables", res: "Área Administrativa", icon: "🧾", 
+        desc: "Aprenda los conocimientos fundamentales de la Contabilidad manual y sistematizada como sistema de información para ofrecer información financiera útil en la toma de decisiones. Manejo de CG1.", 
+        modules: ["CONTABILIDAD Y LA EMPRESA", "PARTIDA DOBLE", "ECUACIÓN FUNDAMENTAL LIBROS AUXILIARES", "LIBROS OFICIALES", "DOCUMENTOS CONTABLES, NÓMINA E INVENTARIO", "CONTABILIDAD SISTEMATIZADA (CGUNO)"] 
+    },
+    { 
+        id: 8, type: "curso", title: "Curso de PROCESOS LEGALES", res: "Área Administrativa", icon: "⚖️", 
+        desc: "Aprenda y conozca la estructura legal de una empresa, como es su funcionamiento en la parte legal, en el área comercial, laboral, tributaria y bancaria.", 
+        modules: ["HISTORIA Y CONSTITUCIÓN", "LEGISLACIÓN COMERCIAL", "LEGISLACIÓN LABORAL", "LEGISLACIÓN Y TRIBUTARIA", "LEGISLACIÓN BANCARIA", "DERECHOS DE AUTOR, MARCAS Y PATENTES"] 
+    },
+    { 
+        id: 9, type: "curso", title: "Procesos de Oficina y Comunicación Empresarial", res: "Área Administrativa", icon: "🗂", 
+        desc: "Desarrollar habilidades prácticas para el manejo de una oficina, ortografía, redacción, elaboración de documentos, también la organización y logística de eventos.", 
+        modules: ["INTRODUCCIÓN A LA OFIMÁTICA", "ORTOGRAFÍA Y REDACCIÓN", "CORRESPONDENCIA Y PRODUCCIÓN DE DOCUMENTOS", "CÁLCULOS DE OFICINA", "ARCHIVÍSTICA", "RELACIONES PÚBLICAS"] 
+    },
+
+    // ================= ÁREA DE MANTENIMIENTO =================
+    { 
+        id: 10, type: "curso", title: "Ensamble y Mantenimiento de Computadores", res: "Área de Mantenimiento", icon: "🔧", 
+        desc: "Aprender a realizar mantenimiento preventivo y correctivo a un computador de mesa o portátil, armar y desarmar equipos, instalación de sistemas operativos y antivirus.", 
+        modules: ["PARTES", "ENSAMBLE", "INSTALACIÓN DE SOFTWARE", "HARDWARE MULTIMEDIA E INTERNET", "SISTEMA OPERATIVO PARA TÉCNICOS", "DIAGNÓSTICO Y CORRECCIÓN"] 
+    },
+    { 
+        id: 11, type: "curso", title: "Curso de Redes Windows", res: "Área de Mantenimiento", icon: "📡", 
+        desc: "Construir entornos de red Punto a Punto y Cliente Servidor, utilizando los diferentes conceptos, herramientas y sistemas operativos de microsoft para garantizar conectividad.", 
+        modules: ["TEORÍA GENERAL DE REDES ALÁMBRICAS E INALÁMBRICAS", "REDES PUNTO A PUNTO", "REDES CLIENTE SERVIDOR", "REDES CLIENTE SERVIDOR (ADMINISTRACIÓN)", "REDES CLIENTE SERVIDOR INTERNET, EXTRANET", "SEGURIDAD Y MANTENIMIENTO DEL SISTEMA"] 
+    },
+    { 
+        id: 12, type: "curso", title: "Curso de Mantenimiento de Celulares", res: "Área de Mantenimiento", icon: "📲", 
+        desc: "Aprender a diagnosticar fallas de los equipos móviles, realizar mantenimiento preventivo y correctivo, realizando las reparaciones y cambio de componentes.", 
+        modules: ["Herramientas básicas y profesionales", "Tecnología existente y Opciones de negocio", "Manejo del multímetro y Lectura con tester", "Componentes de tarjetas lógicas", "Cambiar táctil, display y visor", "Fallas comunes y Mantenimiento", "Reconstruir flex y Liberación de bandas", "Soldadura, puentes y puertos", "Manejo del software, flasheo y hard reset"] 
+    },
+    { 
+        id: 13, type: "curso", title: "Curso de Electrónica", res: "Área de Mantenimiento", icon: "⚡", 
+        desc: "Conocer los conceptos de electrónica, aprender a construir dispositivos que permitan dar respuesta a una necesidad del mercado laboral y reparación electrónica.", 
+        modules: ["FUNDAMENTOS DE ELECTRÓNICA", "HERRAMIENTAS Y COMPONENTES ELECTRÓNICOS", "MEDICIONES Y PRUEBAS", "SOLDADURA Y CAMBIOS DE COMPONENTES", "PROYECTO FINAL"] 
+    },
+
+    // ================= ÁREA DE DISEÑO =================
+    { 
+        id: 14, type: "curso", title: "Curso de Piezas Gráficas", res: "Área de Diseño", icon: "✏️", 
+        desc: "Aprende a crear piezas gráficas que posibilitan comunicar visualmente información, hechos, ideas y valores. Utilizando volantes, afiches, pendones, tarjetas, entre otros.", 
+        modules: ["CONCEPTOS DE DISEÑO Y PUBLICIDAD", "COREL DRAW - ILUSTRACIÓN", "COREL PIEZAS GRÁFICAS", "ILLUSTRATOR (ILUSTRACIÓN)", "ILLUSTRATOR (HERRAMIENTAS Y PIEZAS GRÁFICAS)", "SOPORTE PUBLICITARIO"] 
+    },
+    { 
+        id: 15, type: "curso", title: "Curso de Fotografía y Montaje", res: "Área de Diseño", icon: "📸", 
+        desc: "Aprende a capturar imágenes desde tu celular y con una cámara profesional, utilizar los enfoques, editar, crear fotomontajes y realizar revelados digitales.", 
+        modules: ["FOTOGRAFÍA E INTRODUCCIÓN LA FOTOGRAFÍA", "TÉCNICAS DE FOTOGRAFÍA", "PHOTOSHOP HERRAMIENTAS", "PHOTOSHOP FOTOMONTAJES Y PIEZAS GRÁFICAS", "REVELADO DIGITAL (ADOBE LIGHTROOM)", "CAMPAÑA PUBLICITARIA"] 
+    },
+    { 
+        id: 16, type: "curso", title: "Curso de Audio y Animación 2D", res: "Área de Diseño", icon: "🎬", 
+        desc: "Aprende a crear y editar audios que te permitan elaborar diferentes tipos de campañas auditivas o editar y realizar montajes con videos, animar objetos en 2D.", 
+        modules: ["INTRODUCCIÓN A LA ANIMACIÓN", "AUDITION", "ANIMATE (ENTORNO GRÁFICO)", "ANIMATE (PIEZAS AUDIOVISUALES)", "MARKETING DIGITAL (CONCEPTOS)", "MARKETING DIGITAL (HERRAMIENTAS)"] 
+    },
+    { 
+        id: 17, type: "curso", title: "Edición de Video (Producción Audiovisual)", res: "Área de Diseño", icon: "🎞️", 
+        desc: "Aprende a crear guiones, ensamblar productos multimedia, crear y editar videos para promocionar una empresa, aplicar efectos y montar estructuras de video.", 
+        modules: ["SOPORTE DE GUIÓN (PRE-PRODUCCIÓN)", "CÁMARA DE VIDEO (PRE-PRODUCCIÓN)", "PREMIER (EDICIÓN DE VIDEO – PRODUCCIÓN)", "PREMIER (MONTAJE DE VIDEO – PRODUCCIÓN)", "AFTER EFFECTS (POST- PRODUCCIÓN)", "PROYECTO TELEVISIVO (POST- PRODUCCIÓN)"] 
+    },
+
+    // ================= ÁREA DE SEGURIDAD Y SALUD =================
+    { 
+        id: 18, type: "curso", title: "Introducción al SG – SST", res: "Área de Seguridad y Salud en el Trabajo", icon: "🛡️", 
+        desc: "Aprenda los conceptos de seguridad y salud, el ciclo PHVA, actualidad de accidentes a nivel mundial, legislación pertinente y matriz de riesgos de una organización.", 
+        modules: ["LEGISLACIÓN", "INTRODUCCIÓN A LA SALUD OCUPACIONAL", "RIESGOS FÍSICOS", "RIESGOS MECÁNICOS Y BIOMECÁNICOS", "RIESGO PSICOSOCIAL", "RIESGO QUÍMICO"] 
+    },
+    { 
+        id: 19, type: "curso", title: "Curso de Inspecciones de seguridad", res: "Área de Seguridad y Salud en el Trabajo", icon: "🔎", 
+        desc: "Aprenda a mantener las instalaciones y equipos en condiciones de seguridad de acuerdo con el reglamento interno de la empresa y la normatividad de ley.", 
+        modules: ["CONCEPTO DE INSPECCIÓN", "INSPECCIÓN DEL PUESTO DE TRABAJO", "INSPECCIÓN E INTERVENCIÓN DE RIESGOS", "INSPECCIONES NO PLANEADAS", "INDICADORES DE INSPECCIÓN", "PRIORIZACIÓN DE RIESGO"] 
+    },
+    { 
+        id: 20, type: "curso", title: "Curso de Planes de emergencia", res: "Área de Seguridad y Salud en el Trabajo", icon: "🚨", 
+        desc: "Aprenda a cómo reducir los riesgos de acuerdo con las características del entorno y generar acciones de prevención de incidentes acorde con la normativa vigente.", 
+        modules: ["MARCO LEGAL", "INVENTARIO DE AMENAZAS", "ANÁLISIS DE VULNERABILIDAD", "PLAN DE EVACUACIÓN", "PROCEDIMIENTO OPERATIVO DE SEGURIDAD", "SIMULACIONES Y SIMULACROS"] 
+    },
+    { 
+        id: 21, type: "curso", title: "Procedimiento de trabajo seguro", res: "Área de Seguridad y Salud en el Trabajo", icon: "📋", 
+        desc: "Aprende a apoyar las actividades de SST de acuerdo con el programa establecido y normativa legal vigente. Cumplimiento de normas ambientales y de seguridad.", 
+        modules: ["PTS SOLDADURA", "PTS ENERGÍAS PELIGROSAS", "PTS ESPACIOS CONFINADOS", "PTS TRABAJO EN ALTURAS", "PTS PRODUCTOS QUÍMICOS", "PTS HERRAMIENTAS MANUALES"] 
+    },
+    { 
+        id: 22, type: "curso", title: "Curso de Inglés Básico", res: "Área de Seguridad y Salud en el Trabajo", icon: "💬", 
+        desc: "Aprenda los conocimientos básicos en las 4 habilidades del idioma inglés (Hablar, escuchar, leer y escribir), para desarrollar la competencia comunicativa a nivel básico.", 
+        modules: ["ELEMENTARY A1.1", "ELEMENTARY A1.2", "ELEMENTARY A1.3", "ELEMENTARY A1.4", "ELEMENTARY A1.5"] 
+    }
 ];
 
 let currentCourseId = null;
-let currentActiveType = 'tecnico';
+
+function loadCursosCortos() {
+    switchView('catalog-view');
+    document.getElementById('catalog-title').innerText = "Catálogo de Programas";
+    renderCoursesGrid(courses);
+}
 
 function handleNavSearch(event) {
     if (event.key === 'Enter') {
@@ -32,31 +136,10 @@ function handleNavSearch(event) {
 
         switchView('catalog-view');
         document.getElementById('catalog-title').innerText = `Resultados para: "${query}"`;
-        document.getElementById('catalog-tabs-container').style.display = 'none';
 
         const results = courses.filter(c => c.title.toLowerCase().includes(query) || c.desc.toLowerCase().includes(query));
         renderCoursesGrid(results);
     }
-}
-
-function goToCategory(type) {
-    currentActiveType = type;
-    switchView('catalog-view');
-    document.getElementById('catalog-title').innerText = "Catálogo de Programas";
-    document.getElementById('catalog-tabs-container').style.display = 'flex';
-    const targetTab = document.getElementById('tab-' + type);
-    if(targetTab) {
-        filterCatalog(type, targetTab);
-    }
-}
-
-function filterCatalog(type, btnElement) {
-    currentActiveType = type;
-    if(btnElement) {
-        document.querySelectorAll('.cat-tab').forEach(btn => btn.classList.remove('active'));
-        btnElement.classList.add('active');
-    }
-    renderCoursesGrid(courses.filter(c => c.type === type));
 }
 
 function renderCoursesGrid(listToRender, isMyCourses = false) {
@@ -64,28 +147,78 @@ function renderCoursesGrid(listToRender, isMyCourses = false) {
     grid.innerHTML = '';
 
     if(listToRender.length === 0) {
-        grid.innerHTML = `<p style="color: var(--text-muted); grid-column: 1/-1; text-align: center; padding: 2rem;">No se encontraron cursos disponibles.</p>`;
+        grid.innerHTML = `<p style="color: var(--text-muted); text-align: center; padding: 2rem;">No se encontraron cursos disponibles.</p>`;
         return;
     }
 
+    // === LÓGICA DE AGRUPACIÓN POR ÁREAS ===
+    const groupedCourses = {};
     listToRender.forEach(course => {
-        const card = document.createElement('div');
-        card.className = 'course-card';
-        
-        let badgeHtml = isMyCourses ? `<div class="badge-en-progreso">En Progreso</div>` : '';
-
-        card.innerHTML = `
-            ${badgeHtml}
-            <div class="course-img">${course.icon}</div>
-            <div class="course-content">
-                <h3 class="course-title">${course.title}</h3>
-                <div class="course-res">${course.res}</div>
-                <p class="course-desc">${course.desc}</p>
-                <button class="btn-inscribirse" onclick="openCourse(${course.id})">Estudiar Curso</button>
-            </div>
-        `;
-        grid.appendChild(card);
+        const area = course.res;
+        if (!groupedCourses[area]) {
+            groupedCourses[area] = [];
+        }
+        groupedCourses[area].push(course);
     });
+
+    let isFirst = true; // Para abrir la primera categoría por defecto
+
+    for (const area in groupedCourses) {
+        // 1. Contenedor de la sección
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'area-section';
+
+        // 2. Título desplegable
+        const areaTitle = document.createElement('div');
+        areaTitle.className = `area-title collapsible ${isFirst ? 'active' : ''}`;
+        areaTitle.innerHTML = `
+            <h3>${area.toUpperCase()}</h3>
+            <span class="toggle-icon" style="transform: ${isFirst ? 'rotate(180deg)' : 'rotate(0deg)'}">▼</span>
+        `;
+
+        // 3. Contenedor interno de cursos (el grid de las tarjetas)
+        const coursesContainer = document.createElement('div');
+        coursesContainer.className = `area-courses-grid ${isFirst ? 'open' : ''}`;
+
+        // Llenamos el contenedor interno con tarjetas
+        groupedCourses[area].forEach(course => {
+            const card = document.createElement('div');
+            card.className = 'course-card';
+            
+            let badgeHtml = isMyCourses ? `<div class="badge-en-progreso">En Progreso</div>` : '';
+
+            card.innerHTML = `
+                ${badgeHtml}
+                <div class="course-img">${course.icon}</div>
+                <div class="course-content">
+                    <h3 class="course-title">${course.title}</h3>
+                    <p class="course-desc">${course.desc}</p>
+                    <button class="btn-inscribirse" onclick="openCourse(${course.id})">Estudiar Curso</button>
+                </div>
+            `;
+            coursesContainer.appendChild(card);
+        });
+
+        // Evento para abrir y cerrar (Acordeón)
+        areaTitle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            coursesContainer.classList.toggle('open');
+            
+            const icon = this.querySelector('.toggle-icon');
+            if (coursesContainer.classList.contains('open')) {
+                icon.style.transform = "rotate(180deg)";
+            } else {
+                icon.style.transform = "rotate(0deg)";
+            }
+        });
+
+        // Juntamos todo y lo pegamos en la pantalla
+        sectionDiv.appendChild(areaTitle);
+        sectionDiv.appendChild(coursesContainer);
+        grid.appendChild(sectionDiv);
+        
+        isFirst = false;
+    }
 }
 
 function openCourse(id) {
@@ -170,18 +303,21 @@ function updateProgressUI(course) {
 function loadMyCourses() {
     switchView('catalog-view');
     document.getElementById('catalog-title').innerText = "Mis Cursos en Progreso";
-    document.getElementById('catalog-tabs-container').style.display = 'none';
     
     let myCourseIds = JSON.parse(localStorage.getItem('my_courses') || '[]');
     let enrolledCourses = courses.filter(c => myCourseIds.includes(c.id));
 
     if(enrolledCourses.length === 0) {
-        enrolledCourses = [courses[0], courses[8]];
-        localStorage.setItem('my_courses', JSON.stringify([courses[0].id, courses[8].id]));
+        enrolledCourses = [courses[0], courses[3]]; 
+        localStorage.setItem('my_courses', JSON.stringify([courses[0].id, courses[3].id]));
     }
 
     renderCoursesGrid(enrolledCourses, true);
-    toggleMobileMenu();
+    
+    const navLinks = document.getElementById('nav-links');
+    if(navLinks.classList.contains('mobile-active')) {
+        toggleMobileMenu();
+    }
 }
 
 function toggleMobileMenu() {
@@ -196,17 +332,22 @@ function switchView(viewId) {
     const nav = document.getElementById('main-nav');
     if (viewId === 'login-view') {
         nav.style.display = 'none';
+        document.getElementById('usuario').value = '';
+        document.getElementById('password').value = '';
     } else {
         nav.style.display = 'flex';
     }
 }
 
+// LOGIN LIBERADO: Sin importar lo que escribas, entra al portal
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
+    
     if (loginForm) {
         loginForm.addEventListener('submit', function(evento) {
-            evento.preventDefault();
-            switchView('selection-view');
+            evento.preventDefault(); 
+            // Carga el catálogo sin validar usuario ni contraseña
+            loadCursosCortos();
         });
     }
 });

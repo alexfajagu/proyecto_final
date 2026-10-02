@@ -29,7 +29,6 @@ body { background-color: var(--bg-deep-blue); color: var(--text-main); min-heigh
     background: radial-gradient(circle at 30% 50%, var(--primary-blue) 0%, var(--bg-deep-blue) 100%);
     height: 100vh; 
     overflow: hidden; 
-    display: none;
 }
 #login-view.active { display: flex; }
 
@@ -68,17 +67,14 @@ body { background-color: var(--bg-deep-blue); color: var(--text-main); min-heigh
     margin-bottom: 0.5rem;
 }
 
-/* LOGO ANIMADO MÁS PEQUEÑO Y SIN BORDES */
 .main-logo-video {
     width: 100%;
-    max-width: 350px; 
-    height: 220px; 
+    max-width: 150px; 
+    height: 90px; 
     object-fit: cover; 
     object-position: center;
-    
     mix-blend-mode: screen; 
     filter: contrast(300%) brightness(120%);
-    
     -webkit-mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
     mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
 }
@@ -93,9 +89,6 @@ body { background-color: var(--bg-deep-blue); color: var(--text-main); min-heigh
     text-align: center; 
 }
 
-/* ========================================= */
-/* IMAGEN DE LA ESTUDIANTE                   */
-/* ========================================= */
 .hero-image {
     width: 100%;
     max-width: 450px; 
@@ -178,7 +171,7 @@ body { background-color: var(--bg-deep-blue); color: var(--text-main); min-heigh
 nav { background-color: var(--card-bg); padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); height: 70px; position: relative; z-index: 1000; }
 
 .nav-logo-img {
-    height: 45px;
+    height: 30px;
     width: auto;
     cursor: pointer;
     transition: transform 0.3s;
@@ -196,73 +189,87 @@ nav { background-color: var(--card-bg); padding: 0 2rem; display: flex; justify-
 .nav-logout span:hover { color: white; }
 .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: white; }
 
-.category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; }
-
 /* ========================================= */
-/* IMÁGENES FOTOGRÁFICAS EN CATEGORÍAS       */
+/* CATÁLOGO, ÁREAS DESPLEGABLES Y CURSOS     */
 /* ========================================= */
-
-.category-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 2rem 2rem 3rem 2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    overflow: hidden; 
-}
-
-.cat-image-wrapper {
-    width: 100%;
-    height: 160px; 
-    margin-bottom: 1.5rem;
-    border-radius: 8px; 
-    overflow: hidden; 
-    border: 1px solid rgba(255, 255, 255, 0.05); 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4); 
-}
-
-.cat-image-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    object-position: center; 
-    transition: transform 0.5s ease; 
-}
-
-.category-card:hover .cat-image-photo {
-    transform: scale(1.1);
-}
-
-.category-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-red);
-    box-shadow: 0 10px 20px rgba(227, 24, 55, 0.15);
-}
-
-.category-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: white; }
-.category-card p { color: var(--text-muted); font-size: 1rem; line-height: 1.5; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-.catalog-tabs { display: flex; gap: 1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; flex-wrap: wrap; }
-.cat-tab { background: transparent; border: 1px solid var(--border-color); color: var(--text-muted); padding: 0.6rem 1.5rem; border-radius: 20px; cursor: pointer; font-weight: 600; transition: 0.3s; }
-.cat-tab:hover { border-color: var(--primary-red); color: white; }
-.cat-tab.active { background-color: var(--primary-red); border-color: var(--primary-red); color: white; }
 
-.course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+/* El contenedor principal de áreas ahora es vertical */
+.course-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+
+/* DISEÑO DEL TÍTULO DESPLEGABLE */
+.area-title.collapsible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.area-title.collapsible:hover {
+    background-color: rgba(227, 24, 55, 0.1);
+    border-color: var(--primary-red);
+}
+
+.area-title.collapsible.active {
+    border-color: var(--primary-red);
+    background-color: rgba(227, 24, 55, 0.1);
+}
+
+.area-title.collapsible h3 {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.toggle-icon {
+    color: var(--primary-red);
+    font-size: 1.2rem;
+    transition: transform 0.4s ease;
+}
+
+/* EL GRID DE CURSOS INTERNO (Oculto por defecto) */
+.area-courses-grid {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 2rem;
+    padding: 1.5rem 0.5rem;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* CLASE QUE MUESTRA EL CONTENIDO CUANDO SE ABRE */
+.area-courses-grid.open {
+    display: grid;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* DISEÑO DE LAS TARJETAS DE CURSOS */
 .course-card { background-color: var(--card-bg); border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color); transition: transform 0.2s; display: flex; flex-direction: column; position: relative; }
-.course-card:hover { transform: translateY(-5px); border-color: var(--primary-red); }
+.course-card:hover { transform: translateY(-5px); border-color: var(--primary-red); box-shadow: 0 8px 15px rgba(0,0,0,0.3); }
 .course-img { height: 160px; background-color: var(--input-bg); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
 .course-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
 .course-title { font-size: 1.1rem; margin-bottom: 0.5rem; }
-.course-res { font-size: 0.8rem; color: var(--accent-gold); margin-bottom: 1rem; }
 .course-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; line-clamp: 3; box-orient: vertical; overflow: hidden; }
 .btn-inscribirse { margin-top: auto; width: 100%; padding: 0.6rem; background-color: transparent; border: 1px solid var(--primary-red); color: var(--primary-red); border-radius: 20px; cursor: pointer; transition: 0.3s; font-weight: bold; }
 .btn-inscribirse:hover { background-color: var(--primary-red); color: white; }
 
 .badge-en-progreso { position: absolute; top: 10px; right: 10px; background-color: var(--accent-gold); color: #000; font-size: 0.75rem; font-weight: bold; padding: 0.3rem 0.7rem; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
 
-/* DASHBOARD Y PROGRESO */
+/* ========================================= */
+/* DASHBOARD Y PROGRESO                      */
+/* ========================================= */
+
 .progress-container { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
 .progress-info { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-main); }
 .progress-bar-bg { width: 100%; background-color: var(--input-bg); height: 10px; border-radius: 5px; overflow: hidden; }
