@@ -87,17 +87,18 @@
         </div>
 
         <div class="nav-right-container">
-            <div class="nav-search-box">
-                <input type="text" id="nav-search-input" placeholder="🔍 Buscar curso..." onkeypress="handleNavSearch(event)">
+            <div class="nav-search-box" style="position: relative;">
+                <input type="text" id="nav-search-input" placeholder="🔍 Buscar curso..." onkeypress="handleNavSearch(event)" oninput="showSearchSuggestions(this.value)">
+                <div id="search-suggestions" class="search-suggestions-dropdown"></div>
             </div>
             <div class="nav-logout">
-                <span onclick="switchView('login-view')">CERRAR SESIÓN</span>
+                <span onclick="cerrarSesion()">CERRAR SESIÓN</span>
             </div>
             <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
         </div>
     </nav>
 
-    <!-- VISTA 2: CATÁLOGO DE CURSOS -->
+    <!-- VISTA 2: CATÁLOGO DE CURSOS DESPLEGABLES -->
     <div id="catalog-view" class="view container">
         <div class="catalog-header" style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 2rem;">
             <h2 id="catalog-title">Catálogo de Programas</h2>
@@ -123,18 +124,24 @@
 
         <div class="dashboard-layout">
             <div class="main-content">
-                <div class="video-player">
+                
+                <div class="video-player" id="video-player-container">
                     <div style="text-align: center; padding: 1rem;">
-                        <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">▶</span>
+                        <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem; color: #555;">▶</span>
                         <span id="current-lesson-title" style="color: #f8fafc; font-size: 1.1rem; font-weight: 600;">Selecciona un módulo para comenzar</span>
                     </div>
                 </div>
+                
                 <div class="course-tabs">
-                    <div class="tab active">Descripción del Programa</div>
-                    <div class="tab">Recursos</div>
-                    <div class="tab">Comentarios</div>
+                    <div class="tab active" id="tab-desc" onclick="changeTab('desc')">Descripción del Programa</div>
+                    <div class="tab" id="tab-recursos" onclick="changeTab('recursos')">Recursos</div>
+                    <div class="tab" id="tab-comentarios" onclick="changeTab('comentarios')">Comentarios</div>
                 </div>
-                <div class="tab-content"><p id="dash-desc" style="line-height: 1.6; color: var(--text-muted);"></p></div>
+                
+                <div class="tab-content" id="tab-content-container">
+                    <p id="dash-desc" style="line-height: 1.6; color: var(--text-muted);"></p>
+                </div>
+                
             </div>
 
             <div class="sidebar">

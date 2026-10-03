@@ -57,9 +57,8 @@ body { background-color: var(--bg-deep-blue); color: var(--text-main); min-heigh
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    align-items: center; 
     width: 100%;
-    height: 400PX;
+    height: 400px;
 }
 
 .logo-container {
@@ -79,7 +78,6 @@ body { background-color: var(--bg-deep-blue); color: var(--text-main); min-heigh
     -webkit-mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
     mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
 }
-
 
 .login-main-title {
     font-size: 16px; 
@@ -194,8 +192,22 @@ nav { background-color: var(--card-bg); padding: 0 2rem; display: flex; justify-
 
 .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
 
-/* El contenedor principal de áreas ahora es vertical */
 .course-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.area-title {
+    grid-column: 1 / -1; 
+    margin-top: 1.5rem;
+    margin-bottom: -0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.area-title h3 {
+    color: var(--primary-red);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 
 /* DISEÑO DEL TÍTULO DESPLEGABLE */
 .area-title.collapsible {
@@ -211,28 +223,10 @@ nav { background-color: var(--card-bg); padding: 0 2rem; display: flex; justify-
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-.area-title.collapsible:hover {
-    background-color: rgba(227, 24, 55, 0.1);
-    border-color: var(--primary-red);
-}
-
-.area-title.collapsible.active {
-    border-color: var(--primary-red);
-    background-color: rgba(227, 24, 55, 0.1);
-}
-
-.area-title.collapsible h3 {
-    color: var(--text-main);
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-.toggle-icon {
-    color: var(--primary-red);
-    font-size: 1.2rem;
-    transition: transform 0.4s ease;
-}
+.area-title.collapsible:hover { background-color: rgba(227, 24, 55, 0.1); border-color: var(--primary-red); }
+.area-title.collapsible.active { border-color: var(--primary-red); background-color: rgba(227, 24, 55, 0.1); }
+.area-title.collapsible h3 { color: var(--text-main); font-size: 1.2rem; font-weight: 700; margin: 0; }
+.toggle-icon { color: var(--primary-red); font-size: 1.2rem; transition: transform 0.4s ease; }
 
 /* EL GRID DE CURSOS INTERNO (Oculto por defecto) */
 .area-courses-grid {
@@ -244,25 +238,22 @@ nav { background-color: var(--card-bg); padding: 0 2rem; display: flex; justify-
 }
 
 /* CLASE QUE MUESTRA EL CONTENIDO CUANDO SE ABRE */
-.area-courses-grid.open {
-    display: grid;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+.area-courses-grid.open { display: grid; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
 /* DISEÑO DE LAS TARJETAS DE CURSOS */
 .course-card { background-color: var(--card-bg); border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color); transition: transform 0.2s; display: flex; flex-direction: column; position: relative; }
 .course-card:hover { transform: translateY(-5px); border-color: var(--primary-red); box-shadow: 0 8px 15px rgba(0,0,0,0.3); }
-.course-img { height: 160px; background-color: var(--input-bg); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+
+/* CONTENEDOR DE LA IMAGEN MÁS GRANDE (240px) */
+.course-img { height: 240px; background-color: var(--input-bg); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+
 .course-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
 .course-title { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.course-res { display: none; }
 .course-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; line-clamp: 3; box-orient: vertical; overflow: hidden; }
 .btn-inscribirse { margin-top: auto; width: 100%; padding: 0.6rem; background-color: transparent; border: 1px solid var(--primary-red); color: var(--primary-red); border-radius: 20px; cursor: pointer; transition: 0.3s; font-weight: bold; }
 .btn-inscribirse:hover { background-color: var(--primary-red); color: white; }
-
 .badge-en-progreso { position: absolute; top: 10px; right: 10px; background-color: var(--accent-gold); color: #000; font-size: 0.75rem; font-weight: bold; padding: 0.3rem 0.7rem; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
 
 /* ========================================= */
@@ -332,4 +323,77 @@ nav { background-color: var(--card-bg); padding: 0 2rem; display: flex; justify-
     .nav-search-box input { width: 120px; font-size: 0.8rem; }
     .nav-search-box input:focus { width: 150px; }
     .nav-logout span { display: none; }
+}
+
+/* ========================================= */
+/* SUGERENCIAS DE BÚSQUEDA EN TIEMPO REAL    */
+/* ========================================= */
+.search-suggestions-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1001;
+    display: none; 
+}
+
+.suggestion-item {
+    padding: 12px 15px;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s;
+    font-size: 0.85rem;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background-color: rgba(227, 24, 55, 0.15); 
+    color: white;
+}
+
+.suggestion-icon {
+    font-size: 1.2rem;
+}
+
+/* ========================================= */
+/* ESTILOS PARA REPRODUCTOR DE VIDEO Y PDF   */
+/* ========================================= */
+.local-video-element {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.btn-descargar-pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-red);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-descargar-pdf:hover {
+    background-color: var(--primary-red-hover);
 }
