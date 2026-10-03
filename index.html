@@ -15,10 +15,10 @@
             <div class="login-left-pane">
                 <div class="brand-content">
                     <div class="logo-container">
-                        <video src="logo_bucle_fondo_negro.mp4" autoplay loop muted playsinline class="main-logo-video"></video>
+                        <video src="./img/logo_bucle_fondo_negro.mp4" autoplay loop muted playsinline class="main-logo-video"></video>
                     </div>
-                    <h2 class="login-main-title">Tu portal<br>al aprendizaje</h2>
-                    <img src="mujer.png" alt="Estudiante System Plus" class="hero-image">
+                    <h2 class="login-main-title">Tu portal de aprendizaje</h2>
+                    <img src="./img/mujer.png" alt="Estudiante System Plus" class="hero-image">
                 </div>
             </div>
 
@@ -52,7 +52,7 @@
                             </label>
                         </div>
 
-                        <button type="submit" class="btn-glass-primary">Iniciar Sesión</button>
+                        <button type="submit" class="btn-glass-primary" onclick="login()">Iniciar Sesión</button>
                         
                         <div class="form-links">
                             <a href="#">¿Olvidaste tu contraseña?</a>
@@ -77,12 +77,12 @@
     <!-- NAVEGACIÓN -->
     <nav id="main-nav" style="display: none;">
         <div class="nav-brand" onclick="loadCursosCortos()">
-            <img src="logotipo.png" alt="System Plus" class="nav-logo-img">
+            <img src="./img/logotipo.png" alt="System Plus" class="nav-logo-img">
         </div>
         
         <div class="nav-links" id="nav-links">
-            <span onclick="loadCursosCortos()">INICIO</span>
-            <span onclick="loadMyCourses()">MIS CURSOS</span>
+            <span onclick="loadCursosCortos()">DASHBOARD</span>
+            <!-- <span onclick="loadMyCourses()">MIS CURSOS</span> -->
             <span onclick="alert('Sección de Comunidad en desarrollo.')">COMUNIDAD</span>
         </div>
 
