@@ -423,7 +423,7 @@ let pendingCourseId = null;
 // USUARIO Y CONTRASEÑA PRINCIPAL
 // ======================================================
 
-const LOGIN_USER = "admin";
+const LOGIN_USER = "Admin";
 
 const LOGIN_PASSWORD = "system2026";
 
