@@ -618,6 +618,15 @@ function switchView(viewId) {
     if (nav) nav.style.display = (viewId === "login-view") ? "none" : "flex";
 }
 
+function cerrarSesion() {
+    sessionStorage.removeItem("systemPlusLogged");
+    switchView("login-view");
+}
+
+function logout() {
+    cerrarSesion();
+}
+
 function login() {
     const usuarioInput = document.getElementById("usuario");
     const passwordInput = document.getElementById("password");
