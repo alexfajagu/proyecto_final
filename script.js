@@ -3,13 +3,8 @@
 // BASE DE DATOS Y FUNCIONES DEL SISTEMA
 // ======================================================
 
-// ======================================================
-// BASE DE DATOS COMPLETA DE CURSOS
-// ======================================================
 const courses = [
-    // ==================================================
     // ÁREA DE PROGRAMACIÓN
-    // ==================================================
     {
         id: 1,
         type: "curso",
@@ -18,14 +13,7 @@ const courses = [
         icon: "🌐",
         img: "Curso de Diseño Web.png",
         desc: "Aprende a crear y a diseñar una página web utilizando componentes gráficos que también serán aprendidos dentro de este módulo de formación, conoce y aprende un lenguaje de marcas llamado HTML/HTML5.",
-        modules: [
-            "INTRODUCCIÓN",
-            "RECURSOS GRÁFICOS",
-            "HTML 5",
-            "CSS 3",
-            "ADMINISTRACIÓN WEB",
-            "CMS"
-        ]
+        modules: ["INTRODUCCIÓN", "RECURSOS GRÁFICOS", "HTML 5", "CSS 3", "ADMINISTRACIÓN WEB", "CMS"]
     },
     {
         id: 2,
@@ -35,14 +23,7 @@ const courses = [
         icon: "🗄️",
         img: "curso de base de datos y PHP.png",
         desc: "Aprende a crear bases de datos con el lenguaje de programación SQL que te permitirá conectar tu base de datos con la página o aplicativo web, aprende un lenguaje orientado a objetos como lo es PHP.",
-        modules: [
-            "ESTRUCTURA Y ANÁLISIS DE INFORMACIÓN",
-            "SQL INTRODUCCIÓN A LA BASE DE DATOS",
-            "SQL ESTRUCTURA Y CREACIÓN DE BASES DE DATOS",
-            "PHP FUNDAMENTOS",
-            "PHP ESTRUCTURA DE DATOS",
-            "PHP ORIENTADO A OBJETOS"
-        ]
+        modules: ["ESTRUCTURA Y ANÁLISIS DE INFORMACIÓN", "SQL INTRODUCCIÓN A LA BASE DE DATOS", "SQL ESTRUCTURA Y CREACIÓN DE BASES DE DATOS", "PHP FUNDAMENTOS", "PHP ESTRUCTURA DE DATOS", "PHP ORIENTADO A OBJETOS"]
     },
     {
         id: 3,
@@ -52,18 +33,10 @@ const courses = [
         icon: "📱",
         img: "curso de java y dispositivos moviles.png",
         desc: "Aprende un lenguaje de programación orientado a objetos cuyo objetivo es escribir el código una vez y ejecutarse en cualquier dispositivo. Aprende Android para crear apps móviles.",
-        modules: [
-            "JAVA FUNDAMENTOS",
-            "JAVA ENTORNO GRÁFICO",
-            "JAVA BASE DE DATOS",
-            "ANDROID FUNDAMENTOS",
-            "ANDROID DESARROLLO DE APLICACIONES"
-        ]
+        modules: ["JAVA FUNDAMENTOS", "JAVA ENTORNO GRÁFICO", "JAVA BASE DE DATOS", "ANDROID FUNDAMENTOS", "ANDROID DESARROLLO DE APLICACIONES"]
     },
 
-    // ==================================================
     // ÁREA ADMINISTRATIVA
-    // ==================================================
     {
         id: 4,
         type: "curso",
@@ -72,14 +45,7 @@ const courses = [
         icon: "📊",
         img: "curso de excel avanzado.png",
         desc: "Conozca y administre de forma asertiva, las diferentes herramientas que ofrece la aplicación Microsoft Excel. Tablas dinámicas, funciones, macros y filtros avanzados.",
-        modules: [
-            "FUNDAMENTOS",
-            "FUNCIONES",
-            "MANEJO DE DATOS",
-            "GRABADORA DE MACROS",
-            "MACROS VBA",
-            "MODELOS FINANCIEROS"
-        ]
+        modules: ["FUNDAMENTOS", "FUNCIONES", "MANEJO DE DATOS", "GRABADORA DE MACROS", "MACROS VBA", "MODELOS FINANCIEROS"]
     },
     {
         id: 5,
@@ -89,13 +55,7 @@ const courses = [
         icon: "💻",
         img: "curso de informatica basica.png",
         desc: "Desarrolla habilidades prácticas en el uso de las herramientas ofimáticas e internet para el uso del aprendizaje en un ambiente laboral o personal.",
-        modules: [
-            "WINDOWS",
-            "WORD",
-            "EXCEL",
-            "POWER POINT",
-            "INTERNET"
-        ]
+        modules: ["WINDOWS", "WORD", "EXCEL", "POWER POINT", "INTERNET"]
     },
     {
         id: 6,
@@ -105,14 +65,7 @@ const courses = [
         icon: "💡",
         img: "curso de emprendimiento empresarial.png",
         desc: "Desarrolla habilidades prácticas en el montaje de una empresa utilizando tecnología para su crecimiento profesional y empresarial, conoce cómo realizar mercadeo y proyecciones financieras.",
-        modules: [
-            "ECONOMÍA Y EMPRESA",
-            "IDENTIFICACIÓN",
-            "PRE-INCUBACIÓN",
-            "INCUBACIÓN",
-            "OPERACIÓN",
-            "EXPANSIÓN"
-        ]
+        modules: ["ECONOMÍA Y EMPRESA", "IDENTIFICACIÓN", "PRE-INCUBACIÓN", "INCUBACIÓN", "OPERACIÓN", "EXPANSIÓN"]
     },
     {
         id: 7,
@@ -122,14 +75,7 @@ const courses = [
         icon: "🧾",
         img: "curso de procesos contables.png",
         desc: "Aprenda los conocimientos fundamentales de la Contabilidad manual y sistematizada como sistema de información para ofrecer información financiera útil en la toma de decisiones. Manejo de CG1.",
-        modules: [
-            "CONTABILIDAD Y LA EMPRESA",
-            "PARTIDA DOBLE",
-            "ECUACIÓN FUNDAMENTAL LIBROS AUXILIARES",
-            "LIBROS OFICIALES",
-            "DOCUMENTOS CONTABLES, NÓMINA E INVENTARIO",
-            "CONTABILIDAD SISTEMATIZADA (CGUNO)"
-        ]
+        modules: ["CONTABILIDAD Y LA EMPRESA", "PARTIDA DOBLE", "ECUACIÓN FUNDAMENTAL LIBROS AUXILIARES", "LIBROS OFICIALES", "DOCUMENTOS CONTABLES, NÓMINA E INVENTARIO", "CONTABILIDAD SISTEMATIZADA (CGUNO)"]
     },
     {
         id: 8,
@@ -139,14 +85,7 @@ const courses = [
         icon: "⚖️",
         img: "curso de procesos legales.png",
         desc: "Aprenda y conozca la estructura legal de una empresa, como es su funcionamiento en la parte legal, en el área comercial, laboral, tributaria y bancaria.",
-        modules: [
-            "HISTORIA Y CONSTITUCIÓN",
-            "LEGISLACIÓN COMERCIAL",
-            "LEGISLACIÓN LABORAL",
-            "LEGISLACIÓN Y TRIBUTARIA",
-            "LEGISLACIÓN BANCARIA",
-            "DERECHOS DE AUTOR, MARCAS Y PATENTES"
-        ]
+        modules: ["HISTORIA Y CONSTITUCIÓN", "LEGISLACIÓN COMERCIAL", "LEGISLACIÓN LABORAL", "LEGISLACIÓN Y TRIBUTARIA", "LEGISLACIÓN BANCARIA", "DERECHOS DE AUTOR, MARCAS Y PATENTES"]
     },
     {
         id: 9,
@@ -156,19 +95,10 @@ const courses = [
         icon: "🗂",
         img: "procesos de oficina y comunicacion empresarial.png",
         desc: "Desarrollar habilidades prácticas para el manejo de una oficina, ortografía, redacción, elaboración de documentos, también la organización y logística de eventos.",
-        modules: [
-            "INTRODUCCIÓN A LA OFIMÁTICA",
-            "ORTOGRAFÍA Y REDACCIÓN",
-            "CORRESPONDENCIA Y PRODUCCIÓN DE DOCUMENTOS",
-            "CÁLCULOS DE OFICINA",
-            "ARCHIVÍSTICA",
-            "RELACIONES PÚBLICAS"
-        ]
+        modules: ["INTRODUCCIÓN A LA OFIMÁTICA", "ORTOGRAFÍA Y REDACCIÓN", "CORRESPONDENCIA Y PRODUCCIÓN DE DOCUMENTOS", "CÁLCULOS DE OFICINA", "ARCHIVÍSTICA", "RELACIONES PÚBLICAS"]
     },
 
-    // ==================================================
     // ÁREA DE MANTENIMIENTO
-    // ==================================================
     {
         id: 10,
         type: "curso",
@@ -177,14 +107,7 @@ const courses = [
         icon: "🔧",
         img: "ensamble y mantenimiento de computadores.png",
         desc: "Aprender a realizar mantenimiento preventivo y correctivo a un computador de mesa o portátil, armar y desarmar equipos, instalación de sistemas operativos y antivirus.",
-        modules: [
-            "PARTES",
-            "ENSAMBLE",
-            "INSTALACIÓN DE SOFTWARE",
-            "HARDWARE MULTIMEDIA E INTERNET",
-            "SISTEMA OPERATIVO PARA TÉCNICOS",
-            "DIAGNÓSTICO Y CORRECCIÓN"
-        ]
+        modules: ["PARTES", "ENSAMBLE", "INSTALACIÓN DE SOFTWARE", "HARDWARE MULTIMEDIA E INTERNET", "SISTEMA OPERATIVO PARA TÉCNICOS", "DIAGNÓSTICO Y CORRECCIÓN"]
     },
     {
         id: 11,
@@ -194,14 +117,7 @@ const courses = [
         icon: "📡",
         img: "curso de redes de windows.png",
         desc: "Construir entornos de red Punto a Punto y Cliente Servidor, utilizando los diferentes conceptos, herramientas y sistemas operativos de microsoft para garantizar conectividad.",
-        modules: [
-            "TEORÍA GENERAL DE REDES ALÁMBRICAS E INALÁMBRICAS",
-            "REDES PUNTO A PUNTO",
-            "REDES CLIENTE SERVIDOR",
-            "REDES CLIENTE SERVIDOR (ADMINISTRACIÓN)",
-            "REDES CLIENTE SERVIDOR INTERNET, EXTRANET",
-            "SEGURIDAD Y MANTENIMIENTO DEL SISTEMA"
-        ]
+        modules: ["TEORÍA GENERAL DE REDES ALÁMBRICAS E INALÁMBRICAS", "REDES PUNTO A PUNTO", "REDES CLIENTE SERVIDOR", "REDES CLIENTE SERVIDOR (ADMINISTRACIÓN)", "REDES CLIENTE SERVIDOR INTERNET, EXTRANET", "SEGURIDAD Y MANTENIMIENTO DEL SISTEMA"]
     },
     {
         id: 12,
@@ -211,17 +127,7 @@ const courses = [
         icon: "📲",
         img: "curso de mantenimiento de celulares.png",
         desc: "Aprender a diagnosticar fallas de los equipos móviles, realizar mantenimiento preventivo y correctivo, realizando las reparaciones y cambio de componentes.",
-        modules: [
-            "Herramientas básicas y profesionales",
-            "Tecnología existente y Opciones de negocio",
-            "Manejo del multímetro y Lectura con tester",
-            "Componentes de tarjetas lógicas",
-            "Cambiar táctil, display y visor",
-            "Fallas comunes y Mantenimiento",
-            "Reconstruir flex y Liberación de bandas",
-            "Soldadura, puentes y puertos",
-            "Manejo del software, flasheo y hard reset"
-        ]
+        modules: ["Herramientas básicas y profesionales", "Tecnología existente y Opciones de negocio", "Manejo del multímetro y Lectura con tester", "Componentes de tarjetas lógicas", "Cambiar táctil, display y visor", "Fallas comunes y Mantenimiento", "Reconstruir flex y Liberación de bandas", "Soldadura, puentes y puertos", "Manejo del software, flasheo y hard reset"]
     },
     {
         id: 13,
@@ -231,18 +137,10 @@ const courses = [
         icon: "⚡",
         img: "curso de electronica.png",
         desc: "Conocer los conceptos de electrónica, aprender a construir dispositivos que permitan dar respuesta a una necesidad del mercado laboral y reparación electrónica.",
-        modules: [
-            "FUNDAMENTOS DE ELECTRÓNICA",
-            "HERRAMIENTAS Y COMPONENTES ELECTRÓNICOS",
-            "MEDICIONES Y PRUEBAS",
-            "SOLDADURA Y CAMBIOS DE COMPONENTES",
-            "PROYECTO FINAL"
-        ]
+        modules: ["FUNDAMENTOS DE ELECTRÓNICA", "HERRAMIENTAS Y COMPONENTES ELECTRÓNICOS", "MEDICIONES Y PRUEBAS", "SOLDADURA Y CAMBIOS DE COMPONENTES", "PROYECTO FINAL"]
     },
 
-    // ==================================================
     // ÁREA DE DISEÑO
-    // ==================================================
     {
         id: 14,
         type: "curso",
@@ -251,14 +149,7 @@ const courses = [
         icon: "✏️",
         img: "curso de piezas graficas.png",
         desc: "Aprende a crear piezas gráficas que posibilitan comunicar visualmente información, hechos, ideas y valores. Utilizando volantes, afiches, pendones, tarjetas, entre otros.",
-        modules: [
-            "CONCEPTOS DE DISEÑO Y PUBLICIDAD",
-            "COREL DRAW - ILUSTRACIÓN",
-            "COREL PIEZAS GRÁFICAS",
-            "ILLUSTRATOR (ILUSTRACIÓN)",
-            "ILLUSTRATOR (HERRAMIENTAS Y PIEZAS GRÁFICAS)",
-            "SOPORTE PUBLICITARIO"
-        ]
+        modules: ["CONCEPTOS DE DISEÑO Y PUBLICIDAD", "COREL DRAW - ILUSTRACIÓN", "COREL PIEZAS GRÁFICAS", "ILLUSTRATOR (ILUSTRACIÓN)", "ILLUSTRATOR (HERRAMIENTAS Y PIEZAS GRÁFICAS)", "SOPORTE PUBLICITARIO"]
     },
     {
         id: 15,
@@ -268,14 +159,7 @@ const courses = [
         icon: "📸",
         img: "curso de fotografia y montaje.png",
         desc: "Aprende a capturar imágenes desde tu celular y con una cámara profesional, utilizar los enfoques, editar, crear fotomontajes y realizar revelados digitales.",
-        modules: [
-            "FOTOGRAFÍA E INTRODUCCIÓN LA FOTOGRAFÍA",
-            "TÉCNICAS DE FOTOGRAFÍA",
-            "PHOTOSHOP HERRAMIENTAS",
-            "PHOTOSHOP FOTOMONTAJES Y PIEZAS GRÁFICAS",
-            "REVELADO DIGITAL (ADOBE LIGHTROOM)",
-            "CAMPAÑA PUBLICITARIA"
-        ]
+        modules: ["FOTOGRAFÍA E INTRODUCCIÓN LA FOTOGRAFÍA", "TÉCNICAS DE FOTOGRAFÍA", "PHOTOSHOP HERRAMIENTAS", "PHOTOSHOP FOTOMONTAJES Y PIEZAS GRÁFICAS", "REVELADO DIGITAL (ADOBE LIGHTROOM)", "CAMPAÑA PUBLICITARIA"]
     },
     {
         id: 16,
@@ -285,14 +169,7 @@ const courses = [
         icon: "🎬",
         img: "curso de audio y animacion 2d.png",
         desc: "Aprende a crear y editar audios que te permitan elaborar diferentes tipos de campañas auditivas o editar y realizar montajes con videos, animar objetos en 2D.",
-        modules: [
-            "INTRODUCCIÓN A LA ANIMACIÓN",
-            "AUDITION",
-            "ANIMATE (ENTORNO GRÁFICO)",
-            "ANIMATE (PIEZAS AUDIOVISUALES)",
-            "MARKETING DIGITAL (CONCEPTOS)",
-            "MARKETING DIGITAL (HERRAMIENTAS)"
-        ]
+        modules: ["INTRODUCCIÓN A LA ANIMACIÓN", "AUDITION", "ANIMATE (ENTORNO GRÁFICO)", "ANIMATE (PIEZAS AUDIOVISUALES)", "MARKETING DIGITAL (CONCEPTOS)", "MARKETING DIGITAL (HERRAMIENTAS)"]
     },
     {
         id: 17,
@@ -302,19 +179,10 @@ const courses = [
         icon: "🎞️",
         img: "edicion de video (produccion audiovisual).png",
         desc: "Aprende a crear guiones, ensamblar productos multimedia, crear y editar videos para promocionar una empresa, aplicar efectos y montar estructuras de video.",
-        modules: [
-            "SOPORTE DE GUIÓN (PRE-PRODUCCIÓN)",
-            "CÁMARA DE VIDEO (PRE-PRODUCCIÓN)",
-            "PREMIER (EDICIÓN DE VIDEO – PRODUCCIÓN)",
-            "PREMIER (MONTAJE DE VIDEO – PRODUCCIÓN)",
-            "AFTER EFFECTS (POST- PRODUCCIÓN)",
-            "PROYECTO TELEVISIVO (POST- PRODUCCIÓN)"
-        ]
+        modules: ["SOPORTE DE GUIÓN (PRE-PRODUCCIÓN)", "CÁMARA DE VIDEO (PRE-PRODUCCIÓN)", "PREMIER (EDICIÓN DE VIDEO – PRODUCCIÓN)", "PREMIER (MONTAJE DE VIDEO – PRODUCCIÓN)", "AFTER EFFECTS (POST- PRODUCCIÓN)", "PROYECTO TELEVISIVO (POST- PRODUCCIÓN)"]
     },
 
-    // ==================================================
     // ÁREA DE SEGURIDAD Y SALUD EN EL TRABAJO
-    // ==================================================
     {
         id: 18,
         type: "curso",
@@ -323,14 +191,7 @@ const courses = [
         icon: "🛡️",
         img: "introduccion al sg-sst.png",
         desc: "Aprenda los conceptos de seguridad y salud, el ciclo PHVA, actualidad de accidentes a nivel mundial, legislación pertinente y matriz de riesgos de una organización.",
-        modules: [
-            "LEGISLACIÓN",
-            "INTRODUCCIÓN A LA SALUD OCUPACIONAL",
-            "RIESGOS FÍSICOS",
-            "RIESGOS MECÁNICOS Y BIOMECÁNICOS",
-            "RIESGO PSICOSOCIAL",
-            "RIESGO QUÍMICO"
-        ]
+        modules: ["LEGISLACIÓN", "INTRODUCCIÓN A LA SALUD OCUPACIONAL", "RIESGOS FÍSICOS", "RIESGOS MECÁNICOS Y BIOMECÁNICOS", "RIESGO PSICOSOCIAL", "RIESGO QUÍMICO"]
     },
     {
         id: 19,
@@ -340,14 +201,7 @@ const courses = [
         icon: "🔎",
         img: "curso de inspeccion de seguridad.png",
         desc: "Aprenda a mantener las instalaciones y equipos en condiciones de seguridad de acuerdo con el reglamento interno de la empresa y la normatividad de ley.",
-        modules: [
-            "CONCEPTO DE INSPECCIÓN",
-            "INSPECCIÓN DEL PUESTO DE TRABAJO",
-            "INSPECCIÓN E INTERVENCIÓN DE RIESGOS",
-            "INSPECCIONES NO PLANEADAS",
-            "INDICADORES DE INSPECCIÓN",
-            "PRIORIZACIÓN DE RIESGO"
-        ]
+        modules: ["CONCEPTO DE INSPECCIÓN", "INSPECCIÓN DEL PUESTO DE TRABAJO", "INSPECCIÓN E INTERVENCIÓN DE RIESGOS", "INSPECCIONES NO PLANEADAS", "INDICADORES DE INSPECCIÓN", "PRIORIZACIÓN DE RIESGO"]
     },
     {
         id: 20,
@@ -357,14 +211,7 @@ const courses = [
         icon: "🚨",
         img: "curso de planes de emergencias.png",
         desc: "Aprenda a cómo reducir los riesgos de acuerdo con las características del entorno y generar acciones de prevención de incidentes acorde con la normativa vigente.",
-        modules: [
-            "MARCO LEGAL",
-            "INVENTARIO DE AMENAZAS",
-            "ANÁLISIS DE VULNERABILIDAD",
-            "PLAN DE EVACUACIÓN",
-            "PROCEDIMIENTO OPERATIVO DE SEGURIDAD",
-            "SIMULACIONES Y SIMULACROS"
-        ]
+        modules: ["MARCO LEGAL", "INVENTARIO DE AMENAZAS", "ANÁLISIS DE VULNERABILIDAD", "PLAN DE EVACUACIÓN", "PROCEDIMIENTO OPERATIVO DE SEGURIDAD", "SIMULACIONES Y SIMULACROS"]
     },
     {
         id: 21,
@@ -374,14 +221,7 @@ const courses = [
         icon: "📋",
         img: "procedimiento del trabajo seguro.png",
         desc: "Aprende a apoyar las actividades de SST de acuerdo con el programa establecido y normativa legal vigente. Cumplimiento de normas ambientales y de seguridad.",
-        modules: [
-            "PTS SOLDADURA",
-            "PTS ENERGÍAS PELIGROSAS",
-            "PTS ESPACIOS CONFINADOS",
-            "PTS TRABAJO EN ALTURAS",
-            "PTS PRODUCTOS QUÍMICOS",
-            "PTS HERRAMIENTAS MANUALES"
-        ]
+        modules: ["PTS SOLDADURA", "PTS ENERGÍAS PELIGROSAS", "PTS ESPACIOS CONFINADOS", "PTS TRABAJO EN ALTURAS", "PTS PRODUCTOS QUÍMICOS", "PTS HERRAMIENTAS MANUALES"]
     },
     {
         id: 22,
@@ -391,31 +231,16 @@ const courses = [
         icon: "💬",
         img: "curso de ingles basico.png",
         desc: "Aprenda los conocimientos básicos en las 4 habilidades del idioma inglés (Hablar, escuchar, leer y escribir), para desarrollar la competencia comunicativa a nivel básico.",
-        modules: [
-            "ELEMENTARY A1.1",
-            "ELEMENTARY A1.2",
-            "ELEMENTARY A1.3",
-            "ELEMENTARY A1.4",
-            "ELEMENTARY A1.5"
-        ]
+        modules: ["ELEMENTARY A1.1", "ELEMENTARY A1.2", "ELEMENTARY A1.3", "ELEMENTARY A1.4", "ELEMENTARY A1.5"]
     }
 ];
 
-// ======================================================
-// VARIABLES GLOBALES
-// ======================================================
 let currentCourseId = null;
 let pendingCourseId = null;
 
-// ======================================================
-// USUARIO Y CONTRASEÑA PRINCIPAL
-// ======================================================
 const LOGIN_USER = "Admin";
 const LOGIN_PASSWORD = "system2026";
 
-// ======================================================
-// CONTRASEÑAS POR ÁREA
-// ======================================================
 const areaPasswords = {
     "Área de Programación": "PROG2026",
     "Área Administrativa": "ADMIN2026",
@@ -424,92 +249,14 @@ const areaPasswords = {
     "Área de Seguridad y Salud en el Trabajo": "SST2026"
 };
 
-// ======================================================
-// CARGAR CATÁLOGO
-// ======================================================
 function loadCursosCortos() {
     switchView("catalog-view");
     const title = document.getElementById("catalog-title");
-    if (title) {
-        title.innerText = "Catálogo de Programas";
-    }
+    if (title) title.innerText = "Catálogo de Programas";
     renderCoursesGrid(courses);
+    renderLearningHistory();
 }
 
-// ======================================================
-// BUSCADOR Y SUGERENCIAS
-// ======================================================
-function handleNavSearch(event) {
-    if (event.key !== "Enter") return;
-    
-    const input = document.getElementById("nav-search-input");
-    if (!input) return;
-    
-    const query = input.value.toLowerCase().trim();
-    if (query === "") {
-        loadCursosCortos();
-        return;
-    }
-
-    switchView("catalog-view");
-    const title = document.getElementById("catalog-title");
-    if (title) {
-        title.innerText = `Resultados para: "${query}"`;
-    }
-
-    const results = courses.filter(course =>
-        course.title.toLowerCase().includes(query) ||
-        course.desc.toLowerCase().includes(query) ||
-        course.res.toLowerCase().includes(query)
-    );
-    renderCoursesGrid(results);
-}
-
-function showSearchSuggestions(query) {
-    const dropdown = document.getElementById('search-suggestions');
-    const cleanQuery = query.toLowerCase().trim();
-
-    if (cleanQuery === '') {
-        dropdown.style.display = 'none';
-        return;
-    }
-
-    const results = courses.filter(c => 
-        c.title.toLowerCase().includes(cleanQuery) || 
-        c.res.toLowerCase().includes(cleanQuery)
-    );
-
-    dropdown.innerHTML = '';
-
-    if (results.length === 0) {
-        dropdown.innerHTML = '<div class="suggestion-item">No se encontraron cursos...</div>';
-    } else {
-        results.forEach(course => {
-            const item = document.createElement('div');
-            item.className = 'suggestion-item';
-            item.innerHTML = `<span class="suggestion-icon">${course.icon}</span> <span>${course.title}</span>`;
-            item.onclick = () => {
-                document.getElementById('nav-search-input').value = '';
-                dropdown.style.display = 'none';
-                openCourse(course.id);
-            };
-            dropdown.appendChild(item);
-        });
-    }
-    dropdown.style.display = 'block';
-}
-
-document.addEventListener('click', function(event) {
-    const searchBox = document.querySelector('.nav-search-box');
-    const dropdown = document.getElementById('search-suggestions');
-    if (searchBox && dropdown && !searchBox.contains(event.target)) {
-        dropdown.style.display = 'none';
-    }
-});
-
-// ======================================================
-// MOSTRAR CURSOS CON ACORDEÓN E IMÁGENES
-// ======================================================
 function renderCoursesGrid(listToRender, isMyCourses = false) {
     const grid = document.getElementById("course-grid");
     if (!grid) return;
@@ -523,9 +270,7 @@ function renderCoursesGrid(listToRender, isMyCourses = false) {
     const groupedCourses = {};
     listToRender.forEach(course => {
         const area = course.res;
-        if (!groupedCourses[area]) {
-            groupedCourses[area] = [];
-        }
+        if (!groupedCourses[area]) groupedCourses[area] = [];
         groupedCourses[area].push(course);
     });
 
@@ -548,11 +293,7 @@ function renderCoursesGrid(listToRender, isMyCourses = false) {
         groupedCourses[area].forEach(course => {
             const card = document.createElement("div");
             card.className = "course-card";
-            let badgeHtml = "";
-
-            if (isMyCourses) {
-                badgeHtml = `<div class="badge-en-progreso">En Progreso</div>`;
-            }
+            let badgeHtml = isMyCourses ? `<div class="badge-en-progreso">En Progreso</div>` : "";
 
             card.innerHTML = `
                 ${badgeHtml}
@@ -572,11 +313,7 @@ function renderCoursesGrid(listToRender, isMyCourses = false) {
             this.classList.toggle("active");
             coursesContainer.classList.toggle("open");
             const icon = this.querySelector(".toggle-icon");
-            if (coursesContainer.classList.contains("open")) {
-                icon.style.transform = "rotate(180deg)";
-            } else {
-                icon.style.transform = "rotate(0deg)";
-            }
+            if (icon) icon.style.transform = coursesContainer.classList.contains("open") ? "rotate(180deg)" : "rotate(0deg)";
         });
 
         sectionDiv.appendChild(areaTitle);
@@ -586,9 +323,6 @@ function renderCoursesGrid(listToRender, isMyCourses = false) {
     }
 }
 
-// ======================================================
-// MODAL DE CONTRASEÑA
-// ======================================================
 function crearModalPassword() {
     if (document.getElementById("area-password-modal")) return;
 
@@ -596,22 +330,18 @@ function crearModalPassword() {
     style.id = "area-password-modal-style";
     style.innerHTML = `
         .area-password-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); display: none; align-items: center; justify-content: center; z-index: 99999; backdrop-filter: blur(8px); }
-        .area-password-modal { width: 420px; max-width: 90%; background: #0d223d; border: 1px solid #29486b; border-radius: 18px; padding: 30px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); animation: modalEntrada 0.25s ease; }
-        @keyframes modalEntrada { from { opacity: 0; transform: translateY(-25px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .area-password-modal { width: 420px; max-width: 90%; background: #0d223d; border: 1px solid #29486b; border-radius: 18px; padding: 30px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); }
         .area-password-header { text-align: center; margin-bottom: 20px; }
         .area-password-icon { font-size: 45px; margin-bottom: 10px; }
         .area-password-header h2 { color: white; margin: 0 0 8px 0; font-size: 24px; }
         .area-password-area { color: #ff314f; font-weight: bold; font-size: 15px; }
         .area-password-text { color: #b7c7da; text-align: center; font-size: 14px; line-height: 1.5; margin: 15px 0 20px; }
         .area-password-input { width: 100%; box-sizing: border-box; padding: 13px 15px; border: 1px solid #395775; border-radius: 10px; background: #081a31; color: white; outline: none; font-size: 16px; margin-bottom: 10px; }
-        .area-password-input:focus { border-color: #ff314f; box-shadow: 0 0 0 2px rgba(255, 49, 79, 0.15); }
         .area-password-error { min-height: 20px; color: #ff526c; font-size: 13px; text-align: center; margin-bottom: 12px; }
         .area-password-buttons { display: flex; gap: 10px; }
         .area-password-buttons button { flex: 1; padding: 12px; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 14px; }
         .btn-password-cancel { background: #263a51; color: white; }
         .btn-password-access { background: #e91e45; color: white; }
-        .btn-password-access:hover { background: #ff3154; }
-        .btn-password-cancel:hover { background: #354c65; }
     `;
     document.head.appendChild(style);
 
@@ -637,13 +367,11 @@ function crearModalPassword() {
     document.body.appendChild(modal);
 
     const input = document.getElementById("area-password-input");
-    input.addEventListener("keydown", function(event) {
-        if (event.key === "Enter") validarPasswordArea();
-    });
-
-    modal.addEventListener("click", function(event) {
-        if (event.target === modal) cerrarModalPassword();
-    });
+    if (input) {
+        input.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") validarPasswordArea();
+        });
+    }
 }
 
 function solicitarPasswordArea(courseId) {
@@ -658,12 +386,12 @@ function solicitarPasswordArea(courseId) {
     const input = document.getElementById("area-password-input");
     const error = document.getElementById("area-password-error");
 
-    areaName.innerText = course.res;
-    input.value = "";
-    error.innerText = "";
-    modal.style.display = "flex";
+    if (areaName) areaName.innerText = course.res;
+    if (input) input.value = "";
+    if (error) error.innerText = "";
+    if (modal) modal.style.display = "flex";
 
-    setTimeout(function() { input.focus(); }, 100);
+    setTimeout(function() { if (input) input.focus(); }, 100);
 }
 
 function validarPasswordArea() {
@@ -674,17 +402,17 @@ function validarPasswordArea() {
 
     const input = document.getElementById("area-password-input");
     const error = document.getElementById("area-password-error");
-    const password = input.value;
+    const password = input ? input.value : "";
     const passwordCorrecta = areaPasswords[course.res];
 
     if (password === passwordCorrecta) {
-        error.innerText = "";
+        if (error) error.innerText = "";
+        const idToOpen = course.id;
         cerrarModalPassword();
-        ingresarAlCurso(course.id);
+        ingresarAlCurso(idToOpen);
     } else {
-        error.innerText = "❌ Contraseña incorrecta. Inténtalo nuevamente.";
-        input.value = "";
-        input.focus();
+        if (error) error.innerText = "❌ Contraseña incorrecta. Inténtalo nuevamente.";
+        if (input) { input.value = ""; input.focus(); }
     }
 }
 
@@ -694,9 +422,6 @@ function cerrarModalPassword() {
     pendingCourseId = null;
 }
 
-// ======================================================
-// ABRIR CURSO E INGRESAR
-// ======================================================
 function openCourse(id) {
     const course = courses.find(c => c.id === id);
     if (!course) return;
@@ -716,7 +441,6 @@ function ingresarAlCurso(id) {
 
     const dashTitle = document.getElementById("dash-title");
     const dashRes = document.getElementById("dash-res");
-    
     if (dashTitle) dashTitle.innerText = course.title;
     if (dashRes) dashRes.innerText = course.res;
 
@@ -727,19 +451,15 @@ function ingresarAlCurso(id) {
     }
 
     renderModulesList(course, 0);
-    updateVideoPlayer(id, 0); 
+    updateVideoPlayer(id, 0);
     changeTab("desc");
     updateProgressUI(course);
     switchView("dashboard-view");
 }
 
-// ======================================================
-// REPRODUCTOR DE VIDEO Y PESTAÑAS (PDF)
-// ======================================================
 function updateVideoPlayer(courseId, modIndex) {
     const videoContainer = document.getElementById("video-player-container");
     const course = courses.find(c => c.id === courseId);
-    
     if (!videoContainer || !course) return;
 
     if (courseId === 1 && modIndex === 0) {
@@ -749,6 +469,12 @@ function updateVideoPlayer(courseId, modIndex) {
                 Tu navegador no soporta la reproducción de videos.
             </video>
         `;
+        const video = videoContainer.querySelector("video");
+        if (video) {
+            video.addEventListener("ended", function() {
+                saveFinishedVideo(courseId, course.modules[modIndex]);
+            });
+        }
     } else {
         videoContainer.innerHTML = `
             <div style="text-align: center; padding: 1rem;">
@@ -765,36 +491,36 @@ function updateVideoPlayer(courseId, modIndex) {
 }
 
 function changeTab(tabName) {
-    document.getElementById("tab-desc").classList.remove("active");
-    document.getElementById("tab-recursos").classList.remove("active");
-    document.getElementById("tab-comentarios").classList.remove("active");
-    
-    document.getElementById(`tab-${tabName}`).classList.add("active");
+    const tabDesc = document.getElementById("tab-desc");
+    const tabRec = document.getElementById("tab-recursos");
+    const tabCom = document.getElementById("tab-comentarios");
+
+    if (tabDesc) tabDesc.classList.remove("active");
+    if (tabRec) tabRec.classList.remove("active");
+    if (tabCom) tabCom.classList.remove("active");
+
+    const targetTab = document.getElementById(`tab-${tabName}`);
+    if (targetTab) targetTab.classList.add("active");
 
     const contentContainer = document.getElementById("tab-content-container");
     const course = courses.find(c => c.id === currentCourseId);
-
     if (!contentContainer || !course) return;
 
     if (tabName === "desc") {
         contentContainer.innerHTML = `<p style="line-height: 1.6; color: var(--text-muted);">${course.desc}</p>`;
-    } 
-    else if (tabName === "recursos") {
+    } else if (tabName === "recursos") {
         if (currentCourseId === 1) {
             contentContainer.innerHTML = `
                 <div style="padding: 1rem 0;">
                     <h3 style="color: #fff; margin-bottom: 10px; font-size: 1.1rem;">Recursos del Módulo</h3>
                     <p style="color: var(--text-muted); margin-bottom: 15px;">Descarga la guía en formato PDF para acompañar tu aprendizaje en esta lección.</p>
-                    <a href="introduccion-al-diseno-web.pdf" target="_blank" class="btn-descargar-pdf">
-                        📄 Descargar PDF
-                    </a>
+                    <a href="introduccion-al-diseno-web.pdf" target="_blank" class="btn-descargar-pdf">📄 Descargar PDF</a>
                 </div>
             `;
         } else {
             contentContainer.innerHTML = `<p style="color: var(--text-muted);">No hay recursos descargables para este módulo aún.</p>`;
         }
-    } 
-    else if (tabName === "comentarios") {
+    } else if (tabName === "comentarios") {
         contentContainer.innerHTML = `
             <div style="padding: 1rem 0;">
                 <p style="color: var(--text-muted); margin-bottom: 15px;">Deja tus dudas o comentarios sobre esta lección.</p>
@@ -805,9 +531,6 @@ function changeTab(tabName) {
     }
 }
 
-// ======================================================
-// FUNCIONES DE MÓDULOS Y PROGRESO
-// ======================================================
 function renderModulesList(course, activeIndex) {
     const moduleList = document.getElementById("module-list");
     if (!moduleList) return;
@@ -853,16 +576,20 @@ function toggleModuleComplete(courseId, modIndex) {
     if (!course) return;
 
     let completedModules = JSON.parse(localStorage.getItem(`completed_course_${courseId}`) || "[]");
+    const videoName = course.modules[modIndex];
 
     if (completedModules.includes(modIndex)) {
         completedModules = completedModules.filter(i => i !== modIndex);
+        removeFinishedVideo(courseId, videoName);
     } else {
         completedModules.push(modIndex);
+        saveFinishedVideo(courseId, videoName);
     }
 
     localStorage.setItem(`completed_course_${courseId}`, JSON.stringify(completedModules));
     renderModulesList(course, modIndex);
     updateProgressUI(course);
+    renderLearningHistory();
 }
 
 function updateProgressUI(course) {
@@ -880,76 +607,23 @@ function updateProgressUI(course) {
     }
 }
 
-function loadMyCourses() {
-    switchView("catalog-view");
-    const title = document.getElementById("catalog-title");
-    if (title) title.innerText = "Mis Cursos en Progreso";
-
-    let myCourseIds = JSON.parse(localStorage.getItem("my_courses") || "[]");
-    let enrolledCourses = courses.filter(c => myCourseIds.includes(c.id));
-
-    if (enrolledCourses.length === 0) {
-        enrolledCourses = [courses[0], courses[3]];
-        localStorage.setItem("my_courses", JSON.stringify([courses[0].id, courses[3].id]));
-    }
-
-    renderCoursesGrid(enrolledCourses, true);
-
-    const navLinks = document.getElementById("nav-links");
-    if (navLinks && navLinks.classList.contains("mobile-active")) {
-        toggleMobileMenu();
-    }
-}
-
-function toggleMobileMenu() {
-    const navLinks = document.getElementById("nav-links");
-    if (navLinks) navLinks.classList.toggle("mobile-active");
-}
-
 function switchView(viewId) {
-    document.querySelectorAll(".view").forEach(view => {
-        view.classList.remove("active");
-    });
-
     const selectedView = document.getElementById(viewId);
     if (!selectedView) return;
+
+    document.querySelectorAll(".view").forEach(view => view.classList.remove("active"));
     selectedView.classList.add("active");
 
     const nav = document.getElementById("main-nav");
-    if (!nav) return;
-
-    if (viewId === "login-view") {
-        nav.style.display = "none";
-        const usuario = document.getElementById("usuario");
-        const password = document.getElementById("password");
-        if (usuario) usuario.value = "";
-        if (password) password.value = "";
-    } else {
-        nav.style.display = "flex";
-    }
+    if (nav) nav.style.display = (viewId === "login-view") ? "none" : "flex";
 }
 
-function cerrarSesion() {
-    sessionStorage.removeItem("systemPlusLogged");
-    switchView("login-view");
-}
-
-function logout() {
-    cerrarSesion();
-}
-
-// ======================================================
-// LOGIN Y SISTEMA
-// ======================================================
 function login() {
     const usuarioInput = document.getElementById("usuario");
     const passwordInput = document.getElementById("password");
     if (!usuarioInput || !passwordInput) return;
 
-    const usuario = usuarioInput.value.trim();
-    const password = passwordInput.value;
-
-    if (usuario === LOGIN_USER && password === LOGIN_PASSWORD) {
+    if (usuarioInput.value.trim() === LOGIN_USER && passwordInput.value === LOGIN_PASSWORD) {
         sessionStorage.setItem("systemPlusLogged", "true");
         loadCursosCortos();
     } else {
@@ -961,7 +635,6 @@ function login() {
 
 document.addEventListener("DOMContentLoaded", function() {
     crearModalPassword();
-    
     const nav = document.getElementById("main-nav");
     if (nav) nav.style.display = "none";
 
@@ -973,11 +646,126 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    const logged = sessionStorage.getItem("systemPlusLogged");
-    if (logged === "true") {
+    if (sessionStorage.getItem("systemPlusLogged") === "true") {
         if (nav) nav.style.display = "flex";
         loadCursosCortos();
     } else {
         switchView("login-view");
     }
 });
+
+// ======================================================
+// HISTORIAL DE APRENDIZAJE Y ACCIÓN DESPLEGABLE
+// ======================================================
+
+const VIDEO_HISTORY_KEY = "systemPlus_videoHistory";
+
+function getVideoHistory() {
+    try { return JSON.parse(localStorage.getItem(VIDEO_HISTORY_KEY) || "[]"); } 
+    catch (e) { return []; }
+}
+
+function saveFinishedVideo(courseId, videoName) {
+    const history = getVideoHistory();
+    const numericCourseId = Number(courseId);
+    const alreadySaved = history.some(item => item.courseId === numericCourseId && item.videoName === videoName);
+
+    if (!alreadySaved) {
+        const course = courses.find(item => item.id === numericCourseId);
+        history.unshift({
+            courseId: numericCourseId,
+            courseName: course ? course.title : "Curso",
+            videoName: videoName,
+            finishedAt: new Date().toLocaleDateString('es-CO', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+        });
+        localStorage.setItem(VIDEO_HISTORY_KEY, JSON.stringify(history));
+    }
+    renderLearningHistory();
+}
+
+function removeFinishedVideo(courseId, videoName) {
+    let history = getVideoHistory();
+    const numericCourseId = Number(courseId);
+    history = history.filter(item => !(item.courseId === numericCourseId && item.videoName === videoName));
+    localStorage.setItem(VIDEO_HISTORY_KEY, JSON.stringify(history));
+    renderLearningHistory();
+}
+
+function getCourseProgress(course) {
+    const modules = course.modules || [];
+    if (modules.length === 0) return 0;
+
+    let completed = [];
+    try { completed = JSON.parse(localStorage.getItem(`completed_course_${course.id}`) || "[]"); } 
+    catch (e) { completed = []; }
+
+    const validIndexes = new Set(completed.filter(index => Number.isInteger(index) && index >= 0 && index < modules.length));
+    return Math.round((validIndexes.size / modules.length) * 100);
+}
+
+function toggleHistorySection() {
+    const header = document.getElementById("history-header");
+    const container = document.getElementById("history-content-container");
+    const icon = document.getElementById("history-toggle-icon");
+
+    if (!container || !icon || !header) return;
+
+    header.classList.toggle("active");
+    container.classList.toggle("open");
+    icon.style.transform = container.classList.contains("open") ? "rotate(180deg)" : "rotate(0deg)";
+}
+
+function renderLearningHistory() {
+    const videoContainer = document.getElementById("video-history-list");
+    const courseContainer = document.getElementById("course-history-list");
+    if (!videoContainer || !courseContainer) return;
+
+    const videos = getVideoHistory();
+
+    if (videos.length === 0) {
+        videoContainer.innerHTML = `<p class="history-empty">Todavía no has terminado ningún video.</p>`;
+    } else {
+        videoContainer.innerHTML = videos.map(video => `
+            <div class="history-item">
+                <h4>🎬 ${escapeHistoryText(video.videoName)}</h4>
+                <p><strong>Curso:</strong> ${escapeHistoryText(video.courseName)}</p>
+                <div class="history-progress">
+                    <div class="history-progress-fill video-progress-fill" style="width: 100%"></div>
+                </div>
+                <span class="history-percentage">✓ Video terminado (${video.finishedAt || 'Reciente'})</span>
+            </div>
+        `).join("");
+    }
+
+    let myCourses = [];
+    try { myCourses = JSON.parse(localStorage.getItem("my_courses") || "[]"); } catch (e) { myCourses = []; }
+
+    const startedIds = new Set(myCourses.map(item => Number(typeof item === "object" ? item.id : item)));
+    courses.forEach(course => { if (getCourseProgress(course) > 0) startedIds.add(Number(course.id)); });
+
+    const startedCourses = courses.filter(course => startedIds.has(Number(course.id)));
+
+    if (startedCourses.length === 0) {
+        courseContainer.innerHTML = `<p class="history-empty">Todavía no has comenzado ningún curso.</p>`;
+    } else {
+        courseContainer.innerHTML = startedCourses.map(course => {
+            const progress = getCourseProgress(course);
+            return `
+                <div class="history-item">
+                    <h4>📘 ${escapeHistoryText(course.title)}</h4>
+                    <p>${progress === 100 ? "🎉 Curso completado" : "📖 Curso en progreso"}</p>
+                    <div class="history-progress">
+                        <div class="history-progress-fill course-progress-fill" style="width: ${progress}%"></div>
+                    </div>
+                    <span class="history-percentage">${progress}% completado</span>
+                </div>
+            `;
+        }).join("");
+    }
+}
+
+function escapeHistoryText(value) {
+    return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    })[char]);
+}
