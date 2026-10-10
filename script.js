@@ -1,8 +1,10 @@
 // ======================================================
-// SYSTEM PLUS LEARNING
-// BASE DE DATOS Y FUNCIONES DEL SISTEMA
+// SYSTEM PLUS LEARNING - SCRIPT PRINCIPAL
 // ======================================================
 
+// ======================================================
+// 1. BASE DE DATOS COMPLETA DE CURSOS
+// ======================================================
 const courses = [
     // ÁREA DE PROGRAMACIÓN
     {
@@ -235,6 +237,9 @@ const courses = [
     }
 ];
 
+// ======================================================
+// 2. VARIABLES GLOBALES Y AUTENTICACIÓN
+// ======================================================
 let currentCourseId = null;
 let pendingCourseId = null;
 
@@ -249,6 +254,9 @@ const areaPasswords = {
     "Área de Seguridad y Salud en el Trabajo": "SST2026"
 };
 
+// ======================================================
+// 3. BÚSQUEDA Y NAVEGACIÓN PRINCIPAL
+// ======================================================
 function loadCursosCortos() {
     switchView("catalog-view");
     const title = document.getElementById("catalog-title");
@@ -257,6 +265,104 @@ function loadCursosCortos() {
     renderLearningHistory();
 }
 
+function loadMyCourses() {
+    switchView("catalog-view");
+    const title = document.getElementById("catalog-title");
+    if (title) title.innerText = "Mis Cursos en Progreso";
+
+    let myCourseIds = JSON.parse(localStorage.getItem("my_courses") || "[]");
+    let enrolledCourses = courses.filter(c => myCourseIds.includes(c.id));
+
+    if (enrolledCourses.length === 0) {
+        enrolledCourses = [courses[0], courses[3]];
+        localStorage.setItem("my_courses", JSON.stringify([courses[0].id, courses[3].id]));
+    }
+
+    renderCoursesGrid(enrolledCourses, true);
+
+    const navLinks = document.getElementById("nav-links");
+    if (navLinks && navLinks.classList.contains("mobile-active")) {
+        toggleMobileMenu();
+    }
+}
+
+function handleNavSearch(event) {
+    if (event.key !== "Enter") return;
+    
+    const input = document.getElementById("nav-search-input");
+    if (!input) return;
+    
+    const query = input.value.toLowerCase().trim();
+    if (query === "") {
+        loadCursosCortos();
+        return;
+    }
+
+    switchView("catalog-view");
+    const title = document.getElementById("catalog-title");
+    if (title) title.innerText = `Resultados para: "${query}"`;
+
+    const results = courses.filter(course =>
+        course.title.toLowerCase().includes(query) ||
+        course.desc.toLowerCase().includes(query) ||
+        course.res.toLowerCase().includes(query)
+    );
+    renderCoursesGrid(results);
+}
+
+function showSearchSuggestions(query) {
+    const dropdown = document.getElementById('search-suggestions');
+    if (!dropdown) return;
+
+    const cleanQuery = query.toLowerCase().trim();
+
+    if (cleanQuery === '') {
+        dropdown.style.display = 'none';
+        return;
+    }
+
+    const results = courses.filter(c => 
+        c.title.toLowerCase().includes(cleanQuery) || 
+        c.res.toLowerCase().includes(cleanQuery)
+    );
+
+    dropdown.innerHTML = '';
+
+    if (results.length === 0) {
+        dropdown.innerHTML = '<div class="suggestion-item">No se encontraron cursos...</div>';
+    } else {
+        results.forEach(course => {
+            const item = document.createElement('div');
+            item.className = 'suggestion-item';
+            item.innerHTML = `<span class="suggestion-icon">${course.icon}</span> <span>${course.title}</span>`;
+            item.onclick = () => {
+                const input = document.getElementById('nav-search-input');
+                if (input) input.value = '';
+                dropdown.style.display = 'none';
+                openCourse(course.id);
+            };
+            dropdown.appendChild(item);
+        });
+    }
+    dropdown.style.display = 'block';
+}
+
+document.addEventListener('click', function(event) {
+    const searchBox = document.querySelector('.nav-search-box');
+    const dropdown = document.getElementById('search-suggestions');
+    if (searchBox && dropdown && !searchBox.contains(event.target)) {
+        dropdown.style.display = 'none';
+    }
+});
+
+function toggleMobileMenu() {
+    const navLinks = document.getElementById("nav-links");
+    if (navLinks) navLinks.classList.toggle("mobile-active");
+}
+
+// ======================================================
+// 4. DESPLIEGUE DEL CATÁLOGO DE CURSOS
+// ======================================================
 function renderCoursesGrid(listToRender, isMyCourses = false) {
     const grid = document.getElementById("course-grid");
     if (!grid) return;
@@ -323,6 +429,9 @@ function renderCoursesGrid(listToRender, isMyCourses = false) {
     }
 }
 
+// ======================================================
+// 5. MODAL Y VALIDACIÓN DE CONTRASEÑA POR ÁREA
+// ======================================================
 function crearModalPassword() {
     if (document.getElementById("area-password-modal")) return;
 
@@ -422,6 +531,9 @@ function cerrarModalPassword() {
     pendingCourseId = null;
 }
 
+// ======================================================
+// 6. NAVEGACIÓN Y APERTURA DE CURSOS
+// ======================================================
 function openCourse(id) {
     const course = courses.find(c => c.id === id);
     if (!course) return;
@@ -457,6 +569,44 @@ function ingresarAlCurso(id) {
     switchView("dashboard-view");
 }
 
+function switchView(viewId) {
+    const selectedView = document.getElementById(viewId);
+    if (!selectedView) return;
+
+    document.querySelectorAll(".view").forEach(view => view.classList.remove("active"));
+    selectedView.classList.add("active");
+
+    const nav = document.getElementById("main-nav");
+    if (nav) nav.style.display = (viewId === "login-view") ? "none" : "flex";
+}
+
+function cerrarSesion() {
+    sessionStorage.removeItem("systemPlusLogged");
+    switchView("login-view");
+}
+
+function logout() {
+    cerrarSesion();
+}
+
+function login() {
+    const usuarioInput = document.getElementById("usuario");
+    const passwordInput = document.getElementById("password");
+    if (!usuarioInput || !passwordInput) return;
+
+    if (usuarioInput.value.trim() === LOGIN_USER && passwordInput.value === LOGIN_PASSWORD) {
+        sessionStorage.setItem("systemPlusLogged", "true");
+        loadCursosCortos();
+    } else {
+        alert("Usuario o contraseña incorrectos.");
+        passwordInput.value = "";
+        passwordInput.focus();
+    }
+}
+
+// ======================================================
+// 7. REPRODUCTOR Y PESTAÑAS DEL DASHBOARD
+// ======================================================
 function updateVideoPlayer(courseId, modIndex) {
     const videoContainer = document.getElementById("video-player-container");
     const course = courses.find(c => c.id === courseId);
@@ -531,6 +681,9 @@ function changeTab(tabName) {
     }
 }
 
+// ======================================================
+// 8. MÓDULOS Y PROGRESO DE CURSOS
+// ======================================================
 function renderModulesList(course, activeIndex) {
     const moduleList = document.getElementById("module-list");
     if (!moduleList) return;
@@ -607,66 +760,9 @@ function updateProgressUI(course) {
     }
 }
 
-function switchView(viewId) {
-    const selectedView = document.getElementById(viewId);
-    if (!selectedView) return;
-
-    document.querySelectorAll(".view").forEach(view => view.classList.remove("active"));
-    selectedView.classList.add("active");
-
-    const nav = document.getElementById("main-nav");
-    if (nav) nav.style.display = (viewId === "login-view") ? "none" : "flex";
-}
-
-function cerrarSesion() {
-    sessionStorage.removeItem("systemPlusLogged");
-    switchView("login-view");
-}
-
-function logout() {
-    cerrarSesion();
-}
-
-function login() {
-    const usuarioInput = document.getElementById("usuario");
-    const passwordInput = document.getElementById("password");
-    if (!usuarioInput || !passwordInput) return;
-
-    if (usuarioInput.value.trim() === LOGIN_USER && passwordInput.value === LOGIN_PASSWORD) {
-        sessionStorage.setItem("systemPlusLogged", "true");
-        loadCursosCortos();
-    } else {
-        alert("Usuario o contraseña incorrectos.");
-        passwordInput.value = "";
-        passwordInput.focus();
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    crearModalPassword();
-    const nav = document.getElementById("main-nav");
-    if (nav) nav.style.display = "none";
-
-    const loginForm = document.getElementById("login-form");
-    if (loginForm) {
-        loginForm.addEventListener("submit", function(event) {
-            event.preventDefault();
-            login();
-        });
-    }
-
-    if (sessionStorage.getItem("systemPlusLogged") === "true") {
-        if (nav) nav.style.display = "flex";
-        loadCursosCortos();
-    } else {
-        switchView("login-view");
-    }
-});
-
 // ======================================================
-// HISTORIAL DE APRENDIZAJE Y ACCIÓN DESPLEGABLE
+// 9. HISTORIAL DE APRENDIZAJE
 // ======================================================
-
 const VIDEO_HISTORY_KEY = "systemPlus_videoHistory";
 
 function getVideoHistory() {
@@ -778,3 +874,27 @@ function escapeHistoryText(value) {
         "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
     })[char]);
 }
+
+// ======================================================
+// 10. INICIALIZADOR DEL SISTEMA
+// ======================================================
+document.addEventListener("DOMContentLoaded", function() {
+    crearModalPassword();
+    const nav = document.getElementById("main-nav");
+    if (nav) nav.style.display = "none";
+
+    const loginForm = document.getElementById("login-form");
+    if (loginForm) {
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            login();
+        });
+    }
+
+    if (sessionStorage.getItem("systemPlusLogged") === "true") {
+        if (nav) nav.style.display = "flex";
+        loadCursosCortos();
+    } else {
+        switchView("login-view");
+    }
+});
